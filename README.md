@@ -67,11 +67,14 @@ mrlesmithjr.elasticsearch
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: elk-es-nodes
       roles:
-         - { role: mrlesmithjr.elk-es }
+        - mrlesmithjr.elk-es
+        - { role: mrlesmithjr.ntp }
+        - { role: mrlesmithjr.rsyslog }
+        - { role: mrlesmithjr.snmpd }
+        - { role: mrlesmithjr.timezone }
+        - { role: mrlesmithjr.elasticsearch }
 
 License
 -------
